@@ -1,0 +1,74 @@
+﻿@model List<Aula>
+
+@{
+    ViewData["Title"] = "Aulas";
+}
+
+ <div id="wrapper">
+        
+        <h1>Aulas do Portifolio</h1>
+    
+    </div>
+
+    <section class="cards">
+        <div class="card" id="x4FdZd2-_uU">
+            <div class="card_image-conteiner">
+                <img src="https://img.youtube.com/vi/x4FdZd2-_uU/maxresdefault.jpg" alt="Video-aula">
+            </div>
+            <div class="card__content">
+                <a href="https://youtu.be/x4FdZd2-_uU" target="_blank">Visualizar aula 1</a>
+            </div>
+            <div class="card__info">
+                <p>57 min</p>
+                <p class="card-price">Free</p>
+            </div>
+        </div>
+
+         <div class="card" id="GykTLqODQuU">
+         <div class="card_image-conteiner">
+            <img src="https://img.youtube.com/vi/GykTLqODQuU/maxresdefault.jpg" alt="Video-aula">
+        </div>
+        <div class="card__content">
+            <a href="https://youtu.be/GykTLqODQuU " target="_blank">Visualizar aula 2</a>
+        </div>
+        <div class="card__info">
+            <p>57 min</p>
+            <p class="card-price">Free</p>
+        </div>
+        </div>
+
+         <div class="card" id="HN1UjzRSdBk">
+         <div class="card_image-conteiner">
+            <img src="https://img.youtube.com/vi/HN1UjzRSdBk/maxresdefault.jpg" alt="Video-aula">
+        </div>
+        <div class="card__content">
+           <a href="https://youtu.be/HN1UjzRSdBk" target="_blank">Visualizar aula 3</a>
+        </div>
+        <div class="card__info">
+            <p>57 min</p>
+            <p class="card-price">Free</p>
+        </div>
+        </div>
+
+        @foreach (Aula aula in Model)
+        {
+            <div class="card" id="ghTrp1x_1As">
+                <div class="card_image-conteiner">
+                    <img src="@aula.ImagemUrl" alt="Video-aula">
+                </div>
+                <div class="card__content">
+                    <a href="@aula.VideoUrl" target="_blank">Visualizar @aula.Nome</a>
+                 </div>
+                <div class="card__info">
+                    <p>@aula.Duracao min</p>
+                    <p class="card-price">@aula.Preco R$</p>
+                </div>
+             </div>
+        }
+
+         
+
+        
+         
+        
+    </section>
